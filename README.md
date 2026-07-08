@@ -1,4 +1,4 @@
-![test status](https://github.com/nugget-cloud/learn-cicd-starter/actions/workflows/ci/badge.svg)
+![test status](https://github.com/nugget-cloud/learn-cicd-starter/actions/workflows/ci.yml/badge.svg)
 
 # learn-cicd-starter (Notely)
 
