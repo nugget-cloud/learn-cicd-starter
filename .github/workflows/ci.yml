@@ -6,7 +6,7 @@ on:
 
 jobs:
   tests:
-    name: Tests
+    name: Run Tests
     runs-on: ubuntu-latest
 
     steps:
@@ -22,7 +22,7 @@ jobs:
         run: go test ./... -cover
 
   style:
-    name: Style
+    name: Run Formatter
     runs-on: ubuntu-latest
 
     steps:
@@ -54,4 +54,4 @@ jobs:
         uses: go install honnef.co/go/tools/cmd/staticcheck@latest
 
       - name: Run StaticCheck
-        uses: staticcheck ./...
+        run: staticcheck ./...
