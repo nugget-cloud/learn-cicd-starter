@@ -6,7 +6,7 @@ on:
 
 jobs:
   tests:
-    name: Run Tests
+    name: Tests
     runs-on: ubuntu-latest
 
     steps:
@@ -20,6 +20,12 @@ jobs:
 
       - name: Run Tests
         run: go test ./... -cover
+
+      - name: Install Go sec
+        run: go install github.com/securego/gosec/v2/cmd/gosec@latest
+
+      - name: Run go sec
+        run: gosec ./...
 
   Style:
     name: Style
